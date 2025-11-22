@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+conda env export > "$(basename $CONDA_DEFAULT_ENV).yml"
