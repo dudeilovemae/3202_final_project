@@ -1,2 +1,11 @@
 #!/usr/bin/bash
-conda env create -f $1
+
+file="$1"
+env_name=$(grep '^name:' "$file" | awk '{print $2}')
+
+echo filename: $file
+echo env_name: $env_name
+
+conda env remove --name $env_name
+conda env create -f $file
+conda activate $env_name
