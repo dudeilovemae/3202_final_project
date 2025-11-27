@@ -4,14 +4,17 @@
 ## Intro to AI Final Project
 
 
-### To run:
+### Set up environment:
 
-First time:
+This project is configured to use conda. 
+
+To start run:
 ```
 ./utils/import_env ./ai_env.yml
 ```
 
-Otherwise:
+
+If env is already created with import then run:
 ```
 conda activate ai_env.yml
 ```
