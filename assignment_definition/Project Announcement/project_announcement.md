@@ -1,6 +1,6 @@
 Project Announcement
 
-- [ ] This is an early announcement for the final project. You don't have to start the project now, but it would be helpful to see what the project looks like and familiarize yourself with the OpenAI Gym/Gymnasium toolkit.
+This is an early announcement for the final project. You don't have to start the project now, but it would be helpful to see what the project looks like and familiarize yourself with the OpenAI Gym/Gymnasium toolkit.
 
 When it comes to selecting a game for the final project, tabulated RL ones are too simple. Most students choose either continuous state/action space (requires approximate RL) or a vision-based problem (This is harder, but a great opportunity to apply computer vision and/or deep RL, which we will learn in later weeks). Think about it for a while. The submission box will appear in the finals week.
 
