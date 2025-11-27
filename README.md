@@ -1,16 +1,20 @@
 # 3202_final_project
 
 
-### Intro to AI Final Project
+## Intro to AI Final Project
 
 
 ### To run:
 
 First time:
+```
 ./utils/import_env ./ai_env.yml
+```
 
 Otherwise:
+```
 conda activate ai_env.yml
+```
 
 
 
