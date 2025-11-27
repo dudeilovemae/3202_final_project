@@ -20,6 +20,11 @@ conda activate ai_env.yml
 ```
 
 
+Finally start jupyter:
+```
+jupyter lab ./franco_final_project.ipynb
+```
+
 
 
 
