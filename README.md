@@ -1,16 +1,22 @@
 # 3202_final_project
-Intro to AI Final Project
 
 
-To run:
-
-conda env create -f ai_env.yml
-conda activate ai_env
+### Intro to AI Final Project
 
 
+### To run:
+
+First time:
+./utils/import_env ./ai_env.yml
+
+Otherwise:
+conda activate ai_env.yml
 
 
-Deliverable list:
+
+
+
+### Deliverable list:
 
 - [ ] A Git repository with working codes or notebook. These must be commented and explained.
 - [ ] A video clip of a demo. Must be either a mp4 unlisted YouTube link or transformed to a .gif image. You can leave those links in the report or embed them in the notebook.
