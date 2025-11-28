@@ -53,7 +53,8 @@ env.close()
 
 # convert the first mp4 to a gif and show it
 first_video = VideoFileClip("lunarLander_random/rand-episode-0.mp4")
-first_video.write_gif("lunarLander_random/rand-episode-0.gif")
+#first_video = first_video.resize(0.5)
+first_video.write_gif("lunarLander_random/rand-episode-0.gif", program="ffmpeg")
 
 print("\nDisplaying gif from episode 1:")
 Image(filename="lunarLander_random/rand-episode-0.gif")
