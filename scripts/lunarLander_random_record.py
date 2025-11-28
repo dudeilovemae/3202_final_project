@@ -51,5 +51,9 @@ for episode_count in range(num_of_episodes):
 
 env.close()
 
+# convert the first mp4 to a gif and show it
+first_video = VideoFileClip("lunarLander_random/rand-episode-0.mp4")
+first_video.write_gif("lunarLander_random/rand-episode-0.gif")
+
 print("\nDisplaying gif from episode 1:")
 Image(filename="lunarLander_random/rand-episode-0.gif")
