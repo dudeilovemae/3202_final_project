@@ -1,5 +1,7 @@
 import gymnasium as gym
-from gymnasium.wrappers import RecordEpisodeStatistics, RecordVideo
+from gymnasium.wrappers import  RecordVideo
+from IPython.display import Image
+from moviepy.editor import VideoFileClip
 
 # Initialise the Lunar Lander Environment 
 env = gym.make("LunarLander-v3", render_mode="rgb_array")
@@ -48,3 +50,6 @@ for episode_count in range(num_of_episodes):
 
 
 env.close()
+
+print("\nDisplaying gif from episode 1:")
+Image(filename="lunarLander_random/rand-episode-0.gif")
