@@ -5,7 +5,7 @@ from moviepy.editor import VideoFileClip
 
 # Initialise the Lunar Lander Environment 
 env = gym.make("LunarLander-v3", render_mode="rgb_array")
-num_of_episodes = 4
+num_of_episodes = 10
 folder="lunarLander_random"
 
 
@@ -18,7 +18,7 @@ env = RecordVideo(
 )
 
 print(f"Running {num_of_episodes} episodes...")
-print(f"Saving vides to: {folder}")
+print(f"Saving vides to: {folder}\n")
 
 # Repeat for set number of episodes
 for episode_count in range(num_of_episodes):
@@ -46,10 +46,11 @@ for episode_count in range(num_of_episodes):
 
     # The documentation states that a score of 200 or more is a solution
     success_criteria = reward >= 200
-    print(f"Episode {episode_over + 1}: {num_of_episodes} steps, reward = {total_score}, success: {success_criteria} ")
+    print(f"Episode {episode_count + 1}: {num_of_steps} steps, reward = {total_score}, success: {success_criteria} ")
 
 
 env.close()
+print("\n")
 
 # convert the first mp4 to a gif and show it
 first_video = VideoFileClip("lunarLander_random/rand-episode-0.mp4")
