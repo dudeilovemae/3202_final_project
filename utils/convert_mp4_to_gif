@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# A utility script to convert a mp4 file to gif
+# 1 Argument, the file to convert
+
+
+input="$1"
+basefilename="${input%.*}"
+output="${basefilename}.gif"
+
+# For now do a basic converstion
+# Future improvements are to make the gif smaller
+ffmpeg -i "$input" "$output"
