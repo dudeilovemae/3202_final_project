@@ -45,7 +45,7 @@ for episode_count in range(num_of_episodes):
         episode_over = terminated or truncated
 
     # The documentation states that a score of 200 or more is a solution
-    success_criteria = reward >= 200
+    success_criteria = total_score >= 200
     print(f"Episode {episode_count + 1}: {num_of_steps} steps, reward = {total_score}, success: {success_criteria} ")
 
 
