@@ -6,7 +6,7 @@ from moviepy.editor import VideoFileClip
 # Initialise the Lunar Lander Environment 
 env = gym.make("LunarLander-v3", render_mode="rgb_array")
 num_of_episodes = 10
-folder="lunarLander_random"
+folder="videos/lunarLander_random"
 
 
 # install env wrapper to record a video
@@ -53,9 +53,9 @@ env.close()
 print("\n")
 
 # convert the first mp4 to a gif and show it
-first_video = VideoFileClip("lunarLander_random/rand-episode-0.mp4")
+first_video = VideoFileClip("videos/lunarLander_random/rand-episode-0.mp4")
 #first_video = first_video.resize(0.5)
-first_video.write_gif("lunarLander_random/rand-episode-0.gif", program="ffmpeg")
+first_video.write_gif("videos/lunarLander_random/rand-episode-0.gif", program="ffmpeg")
 
 print("\nDisplaying gif from episode 1:")
-Image(filename="lunarLander_random/rand-episode-0.gif")
+Image(filename="videos/lunarLander_random/rand-episode-0.gif")
