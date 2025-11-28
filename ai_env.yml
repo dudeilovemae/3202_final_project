@@ -41,6 +41,7 @@ dependencies:
   - executing=2.2.1=py310h06a4308_0
   - expat=2.7.3=h3385a95_0
   - farama-notifications=0.0.4=pyhd8ed1ab_0
+  - ffmpeg=4.4.0=h6987444_4
   - fluidsynth=2.3.7=hd992666_0
   - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
   - font-ttf-inconsolata=3.000=h77eed37_0
@@ -53,6 +54,8 @@ dependencies:
   - freetype=2.14.1=ha770c72_0
   - gettext=0.25.1=h3f43e3d_1
   - gettext-tools=0.25.1=h3f43e3d_1
+  - gmp=6.3.0=hac33072_2
+  - gnutls=3.6.13=h85f3911_1
   - graphite2=1.3.14=hecca717_2
   - gymnasium=1.2.2=np2py310hf455f1b_0
   - gymnasium-atari=1.2.2=py310ha1383c8_0
@@ -66,6 +69,7 @@ dependencies:
   - hyperframe=6.1.0=pyhd8ed1ab_0
   - icu=73.2=h59595ed_0
   - idna=3.11=pyhd8ed1ab_0
+  - imageio-ffmpeg=0.6.0=pyhd8ed1ab_0
   - importlib-metadata=8.7.0=pyhe01879c_1
   - importlib-resources=6.5.2=pyhd8ed1ab_0
   - importlib_resources=6.5.2=pyhd8ed1ab_0
@@ -92,6 +96,7 @@ dependencies:
   - jupyterlab_server=2.28.0=pyhcf101f3_0
   - lame=3.100=h166bdaf_1003
   - lark=1.3.1=pyhd8ed1ab_0
+  - lcms2=2.17=h717163a_0
   - ld_impl_linux-64=2.44=h153f514_2
   - lerc=4.0.0=h0aef613_1
   - libasprintf=0.25.1=h3f43e3d_1
@@ -140,6 +145,7 @@ dependencies:
   - libusb=1.0.29=h73b1eb8_0
   - libuuid=1.41.5=h5eee18b_0
   - libvorbis=1.3.7=h54a6638_2
+  - libvpx=1.11.0=h9c3ff4c_3
   - libvulkan-loader=1.4.328.1=h5279c79_0
   - libwebp-base=1.6.0=hd42ef1d_0
   - libxcb=1.17.0=h9b100fa_0
@@ -149,14 +155,18 @@ dependencies:
   - markupsafe=3.0.3=py310h3406613_0
   - matplotlib-inline=0.2.1=py310h06a4308_0
   - mistune=3.1.4=pyhcf101f3_0
+  - moviepy=1.0.3=pyhd8ed1ab_1
   - mpg123=1.32.9=hc50e24c_0
   - nbclient=0.10.2=pyhd8ed1ab_0
   - nbconvert-core=7.16.6=pyhcf101f3_1
   - nbformat=5.10.4=pyhd8ed1ab_1
   - ncurses=6.5=h7934f7d_0
   - nest-asyncio=1.6.0=py310h06a4308_0
+  - nettle=3.6=he412f7d_0
   - notebook-shim=0.2.4=pyhd8ed1ab_1
   - numpy=2.2.6=py310hefbff90_0
+  - openh264=2.1.1=h4ff587b_0
+  - openjpeg=2.5.3=h55fea9a_1
   - openssl=3.6.0=h26f9b46_0
   - opusfile=0.12=h3358134_2
   - overrides=7.7.0=pyhd8ed1ab_1
@@ -165,6 +175,7 @@ dependencies:
   - parso=0.8.5=py310h06a4308_0
   - pcre2=10.44=hc749103_2
   - pexpect=4.9.0=py310h06a4308_1
+  - pillow=11.3.0=py310h6557065_3
   - pip=25.3=pyhc872135_0
   - pixman=0.46.4=h54a6638_1
   - platformdirs=4.5.0=py310h06a4308_0
@@ -231,6 +242,8 @@ dependencies:
   - webencodings=0.5.1=pyhd8ed1ab_3
   - websocket-client=1.9.0=pyhd8ed1ab_0
   - wheel=0.45.1=py310h06a4308_0
+  - x264=1!161.3030=h7f98852_1
+  - x265=3.5=h924138e_3
   - xkeyboard-config=2.46=hb03c661_0
   - xorg-libice=1.1.2=hb9d3cd8_0
   - xorg-libsm=1.2.6=h9b100fa_0
@@ -256,13 +269,10 @@ dependencies:
       - cycler==0.12.1
       - fonttools==4.60.1
       - imageio==2.37.2
-      - imageio-ffmpeg==0.6.0
       - kiwisolver==1.4.9
       - matplotlib==3.10.7
-      - moviepy==2.2.1
       - opencv-python==4.12.0.88
       - pandas==2.3.3
-      - pillow==11.3.0
       - proglog==0.1.12
       - pyparsing==3.2.5
       - python-dotenv==1.2.1
