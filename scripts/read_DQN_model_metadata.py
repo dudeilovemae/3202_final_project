@@ -3,7 +3,7 @@ This python script can be used to inspect the metadata of a model.
 Created for CSPB 3202 Final Project.
 
 Usage:
-read_model_metadata.py file
+read_DQN_model_metadata.py file
 
 Author: Ray Franco
 """
