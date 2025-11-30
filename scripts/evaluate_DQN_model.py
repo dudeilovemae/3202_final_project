@@ -3,7 +3,7 @@ This python script can be used to evaluate a model.
 Created for CSPB 3202 Final Project.
 
 Usage:
-evaluate_model.py file
+evaluate_DQN_model.py file
 
 Author: Ray Franco
 """
