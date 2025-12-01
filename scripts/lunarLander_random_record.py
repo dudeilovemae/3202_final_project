@@ -1,9 +1,11 @@
+# version controlled in scripts/lunarLander_random_record.py
+
 import gymnasium as gym
 from gymnasium.wrappers import  RecordVideo
 from IPython.display import Image
 from moviepy.editor import VideoFileClip
 
-# Initialise the Lunar Lander Environment 
+# Initialize the Lunar Lander Environment 
 env = gym.make("LunarLander-v3", render_mode="rgb_array")
 num_of_episodes = 10
 folder="videos/lunarLander_random"
@@ -36,7 +38,7 @@ for episode_count in range(num_of_episodes):
         # For now we will use a random agent
         action = env.action_space.sample()
 
-        # Take the random action and recieve information 
+        # Take the random action and receive information 
         observation, reward, terminated, truncated, info = env.step(action)
         total_score = total_score + reward
 

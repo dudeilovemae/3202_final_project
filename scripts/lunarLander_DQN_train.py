@@ -1,3 +1,5 @@
+# version controlled in scripts/lunarLander_DQN_train.py
+
 # Had to revert to gym for sb3
 import gym 
 from stable_baselines3 import DQN
@@ -24,12 +26,4 @@ avg_reward, std_reward = eval.evaluate_policy(model, env, n_eval_episodes=25, de
 print(f"\nEvaluation has shown: \nAverage Reward: {avg_reward}\nStandard Dev: {std_reward}")
 
 obs = env.reset()
-
-for _ in range(500):
-    action, _states = model.predict(obs, deterministic=True)
-    obs, reward, done, info = env.step(action)
-    env.render()
-    if done:
-        obs = env.reset()
-
 env.close()

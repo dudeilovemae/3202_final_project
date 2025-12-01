@@ -1,3 +1,5 @@
+# version controlled in scripts/lunarLander_heuristic_explore.py
+
 import gymnasium as gym
 from gymnasium.wrappers import  RecordVideo
 from IPython.display import Image
@@ -8,7 +10,7 @@ from collections import namedtuple
 # Create a named tuple to hold observation data
 Observation = namedtuple("Observation", ["x", "y", "x_vel", "y_vel", "angle", "angular_vel", "touch1", "touch2"])
 
-# Initialise the Lunar Lander Environment this time with a limit on episode steps
+# Initialize the Lunar Lander Environment this time with a limit on episode steps
 env = gym.make("LunarLander-v3", max_episode_steps=20)
 num_of_episodes = 1
 
@@ -32,7 +34,7 @@ for episode_count in range(num_of_episodes):
         # For now we will use a random agent
         action = env.action_space.sample()
 
-        # Take the random action and recieve information 
+        # Take the random action and receive information 
         observation, reward, terminated, truncated, info = env.step(action)
 
         # Put observation into the named tuple I created

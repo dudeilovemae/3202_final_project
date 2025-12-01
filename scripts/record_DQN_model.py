@@ -3,7 +3,7 @@ This python script can be used to run a model and save it's output into a video.
 Created for CSPB 3202 Final Project.
 
 Usage:
-record_DQN_model.py file
+record_DQN_model.py file prefix
 
 Author: Ray Franco
 """
@@ -20,6 +20,7 @@ import os
 
 
 input_file = sys.argv[1]
+prefix = sys.argv[2]
 
 if os.path.exists(input_file):
     model_file = input_file
@@ -33,7 +34,7 @@ if os.path.exists(input_file):
     env = RecordVideo(
         env,
         video_folder=folder,                  # Folder
-        name_prefix=f"DQN_v2",                # Video filename prefix
+        name_prefix=prefix,                # Video filename prefix
         episode_trigger=lambda x: True        # Record every episode
     )
 
@@ -42,7 +43,7 @@ if os.path.exists(input_file):
     obs = env.reset()
 
     print(f"Running {num_of_episodes} episodes...")
-    print(f"Saving vides to: {folder}\n")    
+    print(f"Saving video to: {folder}\n")    
 
     # Repeat for set number of episodes
     for episode_count in range(num_of_episodes):

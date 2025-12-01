@@ -1,3 +1,5 @@
+# version controlled in scripts/lunarLander_heuristic.py
+
 import gymnasium as gym
 from gymnasium.wrappers import  RecordVideo
 from IPython.display import Image
@@ -21,7 +23,7 @@ class LunarAction(Enum):
 def lunar_heuristic(obs):
     obs_tuple = Observation(*obs)
 
-    # Prioity 0: If touch down do nothing
+    # Priority 0: If touch down do nothing
     if obs_tuple.touch1 and obs_tuple.touch2:
         return LunarAction.IDLE.value
 
@@ -35,20 +37,16 @@ def lunar_heuristic(obs):
     if obs_tuple.angle < -.15:
         return LunarAction.FIRE_RIGHT.value
 
-    # Priorty 3: Not between flags
+    # Priority 3: Not between flags
     if obs_tuple.x < -.15:
         return LunarAction.FIRE_LEFT.value
     if obs_tuple.x > .15:
         return LunarAction.FIRE_RIGHT.value
     
-    
-  
     return LunarAction.IDLE.value
     
 
-
-
-# Initialise the Lunar Lander Environment 
+# Initialize the Lunar Lander Environment 
 env = gym.make("LunarLander-v3", render_mode="rgb_array")
 num_of_episodes = 10
 folder="videos/lunarLander_heuristic"
@@ -81,7 +79,7 @@ for episode_count in range(num_of_episodes):
         # Simple Heuristic agent
         action = lunar_heuristic(observation)
 
-        # Take the random action and recieve information 
+        # Take the random action and receive information 
         observation, reward, terminated, truncated, info = env.step(action)
         total_score = total_score + reward
 

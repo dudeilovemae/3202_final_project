@@ -1,4 +1,5 @@
-# Had to revert to gym for sb3
+# version controlled in scripts/lunarLander_DQN_record.py
+
 import gym 
 from stable_baselines3 import DQN
 import stable_baselines3.common.evaluation as eval
@@ -9,7 +10,6 @@ from IPython.display import Video
 
 
 # Init the lunar lander env
-# had to revert to v2 for sb3
 env = gym.make("LunarLander-v2")
 
 num_of_episodes = 1
@@ -19,7 +19,7 @@ folder="videos/lunarLander_DQN"
 env = RecordVideo(
     env,
     video_folder=folder,                  # Folder
-    name_prefix="DQN_v1",              # Video filename prefix
+    name_prefix="DQN_v1",                 # Video filename prefix
     episode_trigger=lambda x: True        # Record every episode
 )
 
@@ -61,12 +61,6 @@ for episode_count in range(num_of_episodes):
 
 env.close()
 print("\n")
-
-# convert the first mp4 to a gif and show it
-#first_video = VideoFileClip("videos/lunarLander_DQN/DQN_v1-episode-0.mp4")
-#first_video = first_video.resize(0.5)
-#first_video = first_video.subclip(0, 10)
-#first_video.write_gif("videos/lunarLander_hDQN/DQN_v1-episode-0.gif", program="ffmpeg", fps=15)
 
 print("\nDisplaying video from episode 1:")
 Video(filename="videos/lunarLander_DQN/DQN_v1-episode-0.mp4", embed=True)

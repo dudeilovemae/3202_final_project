@@ -10,7 +10,7 @@ env = gym.make("LunarLander-v2")
 
 
 # load saved model
-model = DQN.load("models/dqn_lunarlander_v1", env=env)
+model = DQN.load("models/batch/dqn_lunarlander_v2_266.97776899917653", env=env)
 
 obs = env.reset()
 

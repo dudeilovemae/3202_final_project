@@ -18,7 +18,7 @@ import os
 # Init the lunar lander env
 # had to revert to v2 for sb3
 env = gym.make("LunarLander-v2")
-num_of_episodes = 50
+num_of_episodes = 100
 
 
 input_file = sys.argv[1]

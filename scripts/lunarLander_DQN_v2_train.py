@@ -3,6 +3,8 @@ import gym
 from stable_baselines3 import DQN
 import stable_baselines3.common.evaluation as eval
 
+
+
 # Init the lunar lander env
 # had to revert to v2 for sb3
 env = gym.make("LunarLander-v2")
@@ -11,16 +13,18 @@ env = gym.make("LunarLander-v2")
 model = DQN("MlpPolicy", 
             env, 
             verbose=0, # no logs
-            exploration_fraction=0.2, # explore longer
+            exploration_fraction=0.28, # explore longer
             exploration_final_eps=0.1, # Keep some random at the end
             gamma=0.99,
             learning_starts=400, # Dont start learning until the buffer is fuller
+            buffer_size=300_000,
+            learning_rate=0.0004, # increasing learning rate slightly 
             batch_size=32*4, # four times the default batch size
             target_update_interval=500,
             tensorboard_log="logs/dqn_v2_tensorboard_log")
 
-print(f"Calling learn for 800_000 timesteps...")
-model.learn(total_timesteps=800_000)
+print(f"Calling learn for 550_000 timesteps...")
+model.learn(total_timesteps=550_000)
 model.save("models/dqn_lunarlander_v2")
 print(f"Learn complete. ")
 

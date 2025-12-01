@@ -1,4 +1,5 @@
-# Had to revert to gym for sb3
+# version controlled in scripts/lunarLander_DQN_train_load.py
+
 import gym 
 from stable_baselines3 import DQN
 import stable_baselines3.common.evaluation as eval
@@ -8,7 +9,6 @@ import shutil
 time_steps_to_train = 50_000
 
 # Init the lunar lander env
-# had to revert to v2 for sb3
 env = gym.make("LunarLander-v2")
 
 
