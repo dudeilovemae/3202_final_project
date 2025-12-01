@@ -22,7 +22,7 @@ Average Reward: -17.93202602169171
 Standard Dev: 18.843608629971794
 
 
----- Meta Data for model: ./dqn_lunarlander_v2_266_solution ----
+---- Meta Data for model: ./dqn_lunarlander_solution.zip ----
 Algorithm: DQN
 Policy: DQNPolicy
 Obs Space: Box([-inf -inf -inf -inf -inf -inf -inf -inf], [inf inf inf inf inf inf inf inf], (8,), float32)
